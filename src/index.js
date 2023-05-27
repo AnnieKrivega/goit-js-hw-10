@@ -5,45 +5,16 @@ const DEBOUNCE_DELAY = 300;
 
 import debounce from "lodash.debounce";
 
-// function onFetch(name){
-//   return  fetch(`https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages`).then(res => {
-//         if(!res.ok){
-//             throw new Error(res.status)
-//          }      
-//    return res.json()}).then(res => {console.log(res); return res}).catch(err => console.log(err))
-// }
-
 const refs ={
     inputEl: document.querySelector('#search-box'),
     ulEl: document.querySelector('.country-list'),
     countryEl: document.querySelector('.country-info')
 }
 
-
 refs.inputEl.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY, ));
 
-// function onInput(evt){
-   
-//     let inputText = evt.currentTarget.value;
-    
-//     let selCont = onFetch(inputText);
-//         console.log(selCont)
-
-//         if(selCont.length > 10){
-//             console.log('too much');
-//             return
-//         }
-//         let selContLength = selCont.length
-//         let selCountries = ''
-//         selCont.map(cont => {
-//           return  selCountries += `<li><img src='${cont.flags.svg}'></img><p>${cont.name.official}</p></li>`
-//         })
-//         refs.ulEl.innerHTML = selCountries;
-// }
-
 function onInput(evt) {
-  
-    // let inputText = evt.currentTarget.value;
+
     let inputText = refs.inputEl.value.trim() ;
     if(!inputText){
       refs.ulEl.innerHTML = '';
@@ -55,8 +26,6 @@ function onInput(evt) {
     onFetch(inputText)
       .then(selCont => {
         console.log(selCont);
-       
-  
         if (selCont.length > 10) {
             
           console.log('too much');
