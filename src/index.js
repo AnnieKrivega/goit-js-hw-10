@@ -48,9 +48,13 @@ function onInput(evt) {
             
         }
 
-        )
-      .catch(error => {console.log(error); Notiflix.Notify.failure("Oops, there is no country with that name");});
-  }
+      )
+      .catch(error => {
+        if(error.message === "404" ) {console.log(error); Notiflix.Notify.failure("Oops, there is no country with that name");
+      } else { Notiflix.Notify.failure("error.message");
+    }
+      });
+  
 function onFullCard(selCont){
     let selCountries = '';
     refs.ulEl.innerHTML = '';
@@ -66,7 +70,4 @@ $(document).ready(function() {
   const myElement = document.getElementById('event.target.id'); 
   if (errorOccurred) {
     myElement.innerHTML = ''; 
-  }
-
-
-
+  }}
