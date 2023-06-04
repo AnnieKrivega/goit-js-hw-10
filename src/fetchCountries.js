@@ -5,3 +5,4 @@ export function onFetch(name){
         }      
     return res.json()}).then(res => {console.log(res); return res}).catch(err => console.log(err))
 }
+Notiflix.Notify.failure(error.message)

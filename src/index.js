@@ -71,3 +71,4 @@ $(document).ready(function() {
   if (errorOccurred) {
     myElement.innerHTML = ''; 
   }}
+
