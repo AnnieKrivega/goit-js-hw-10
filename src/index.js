@@ -27,7 +27,8 @@ function onInput(evt) {
       .then(selCont => {
         console.log(selCont);
         if (selCont.length > 10) {
-            
+          refs.countryEl.innerHTML = '';
+          refs.ulEl.innerHTML = '';
           console.log('too much');
           Notiflix.Notify.info("Too many matches found. Please enter a more specific name.");
           return;
@@ -43,6 +44,8 @@ function onInput(evt) {
               refs.ulEl.innerHTML = selCountries;
             }
             if(selCont.length === 1){
+              refs.countryEl.innerHTML = '';
+                refs.ulEl.innerHTML = '';
                 onFullCard(selCont)
             }
             
