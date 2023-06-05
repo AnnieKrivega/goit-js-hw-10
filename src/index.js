@@ -44,8 +44,8 @@ function onInput(evt) {
               refs.ulEl.innerHTML = selCountries;
             }
             if(selCont.length === 1){
-              refs.countryEl.innerHTML = '';
-
+              refs.selCont.innerHTML = '';
+              refs.ulEl.innerHTML = '';
                 onFullCard(selCont)
                 
             }
