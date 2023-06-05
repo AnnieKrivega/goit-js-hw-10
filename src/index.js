@@ -67,8 +67,8 @@ function onFullCard(selCont){
     selCountries  += `<li style=' align-items: center; margin-bottom: 20px ' ><img style='width: 80px; margin-right:20px;  ' src='${selCont[0].flags.svg}'></img><h3>${selCont[0].name.official}</h3><div><p><b>Capital</b>: ${selCont[0].capital}</p><p><b>Population</b>: ${selCont[0].population}</p><p><b>Languages</b>: ${Object.values(selCont[0].languages).join(', ')}</p></div></li>`;
     refs.countryEl.innerHTML = selCountries;
 }
-$(document).ready(function() {
-  $('.elemClass').click(function(event) {
+(document).ready(function() {
+  ('.elemClass').click(function(event) {
   console.log(event.target.id);
   });
   });
