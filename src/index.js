@@ -36,9 +36,10 @@ function onInput(evt) {
   
         let selCountries = '';
         if(selCont.length > 1){
+          refs.countryEl.innerHTML = '';
+          refs.ulEl.innerHTML = '';
             selCont.forEach(cont => {
-                refs.countryEl.innerHTML = '';
-                refs.ulEl.innerHTML = '';
+
                 selCountries += `<li style='display: flex; align-items: center; margin-bottom: 20px ' ><img style='width: 40px; margin-right:20px;  ' src='${cont.flags.svg}'></img><p>${cont.name.official}</p></li>`;
               });
               refs.ulEl.innerHTML = selCountries;
