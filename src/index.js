@@ -54,6 +54,8 @@ function onInput(evt) {
       )
       .catch(error => {
         if(error.message === "404" ) {console.log(error); Notiflix.Notify.failure("Oops, there is no country with that name");
+        refs.countryEl.innerHTML = '';
+                refs.ulEl.innerHTML = '';
       } else { Notiflix.Notify.failure("error.message");
     }
       });
