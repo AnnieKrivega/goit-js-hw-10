@@ -17,8 +17,6 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
-
-  box-shadow: 5px 5px 5px gray;
 }
 .flag-name-country {
   display: flex;
@@ -28,6 +26,4 @@ body {
 .list-of-properties {
   list-style: none;
 }
-.flag {
-  box-shadow: 5px 5px 5px;
-}
+

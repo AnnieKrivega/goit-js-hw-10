@@ -35,8 +35,6 @@ function handlerCountry(event) {
       } else if (name === '') {
         infoCountry.innerHTML = ' ';
         listCountry.innerHTML = ' ';
-        inputCountry.style.boxShadow = '5px 5px 5px gray';
-        inputCountry.style.color = 'black';
         //Notiflix.Notify.failure('hhhhh');
       } else {
         createFlagCountry(countries);
@@ -45,8 +43,6 @@ function handlerCountry(event) {
     .catch(error => {
       console.error(error);
 
-      inputCountry.style.boxShadow = '5px 5px 5px red';
-      inputCountry.style.color = 'red';
       Notiflix.Notify.failure('Oops, there is no country with that name');
     });
 }
