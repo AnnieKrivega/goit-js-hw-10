@@ -47,7 +47,10 @@ function onInput(evt) {
               refs.countryEl.innerHTML = '';
               refs.ulEl.innerHTML = '';
                 onFullCard(selCont)
-                
+            
+            } else if (selCountries === '') {
+              refs.countryEl.innerHTML = '';
+              refs.ulEl.innerHTML = '';
             }
             
         }
