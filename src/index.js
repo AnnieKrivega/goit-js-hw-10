@@ -57,7 +57,7 @@ function onInput(evt) {
         if(error.message === "404" ) {
 
           console.log(error); Notiflix.Notify.failure("Oops, there is no country with that name");
-      } else { Notiflix.Notify.failure("error.message");
+      } else { Notiflix.Notify.failure(error.message);
     }
       });
   
